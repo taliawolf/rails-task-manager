@@ -1,0 +1,8 @@
+<h1>My tasks</h1>
+<ul>
+<% @tasks.each do |task| %>
+   <li><%= link_to task.title, task_path(task) %></li> <!--want the link to go to the show page for one task. The show prefix is task  -->
+<% end %>
+</ul>
+
+<%= link_to "Add a new task", new_task_path %>
